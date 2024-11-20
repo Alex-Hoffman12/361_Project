@@ -10,18 +10,14 @@ const MessageProvider = ({ children }: Props) => {
   const [messages, dispatch] = useReducer(MessageReducer, {
     messages: [
       {
-        message: "Hi, what would you like to learn about this document?",
+        message: "Hello, what error would you like more information about?",
         type: "apiMessage",
       },
     ],
     history: [],
   });
 
-  return (
-    <MessageContext.Provider value={{ messageState: messages, dispatch }}>
-      {children}
-    </MessageContext.Provider>
-  );
+  return <MessageContext.Provider value={{ messageState: messages, dispatch }}>{children}</MessageContext.Provider>;
 };
 
 export default MessageProvider;

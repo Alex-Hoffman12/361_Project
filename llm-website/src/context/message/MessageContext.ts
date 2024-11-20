@@ -11,7 +11,7 @@ const messageContext = createContext<MessageContext>({
   messageState: {
     messages: [
       {
-        message: "Hi, what would you like to learn about this document?",
+        message: "Hello, what error would you like more information about?",
         type: "apiMessage",
       },
     ],
