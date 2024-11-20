@@ -1,0 +1,54 @@
+/* --width -> used by bot ai & user MessageBox it set their widths to fit in box */
+:root {
+  --width: calc(100% - 22px);
+}
+
+.chatBox {
+  margin: auto;
+  height: 75vh;
+  width: 75%;
+  position: relative;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: thin;
+  border-color: rgba(219, 219, 219, 0.7);
+  flex: auto;
+  flex-direction: column-reverse;
+  max-height: 100%;
+}
+
+.boxWrapLeft {
+  position: absolute;
+  overflow-wrap: break-word;
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding-left: 2px;
+  border-radius: 20px;
+  bottom: 0px;
+}
+
+.aiMessageBox {
+  background-color: rgba(168, 168, 168, 0.5);
+  border-radius: 20px;
+  width: var(--width);
+  padding: 5px;
+  margin: 5px;
+  position: relative;
+  align-items: flex-start;
+}
+
+.userMessageBox {
+  background-color: rgba(206, 206, 206, 0.45);
+  border-radius: 20px;
+  width: var(--width);
+  padding: 5px;
+  margin: 5px;
+  position: relative;
+  align-items: flex-start;
+}
+
+.image {
+  margin: 2px;
+  border-radius: 10px;
+}
