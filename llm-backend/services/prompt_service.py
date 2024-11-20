@@ -1,21 +1,18 @@
 from os import getenv
-
 from openai import OpenAI
-from models.prompt import PromptResponse, Session
-
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
 client = OpenAI(
-  api_key=os.getenv("OPENAI_API_KEY"),
+  api_key=getenv("OPENAI_API_KEY"),
 )
 
 async def get_openai_generator(prompt: str):
 
     messages = []
-    
+
+    # This is where we need to add the custom prompt
     messages.append({"role": "user", "content": prompt})
 
     openai_stream = client.chat.completions.create(
@@ -39,10 +36,3 @@ async def get_openai_generator(prompt: str):
                 current_response = response.delta.content
                 complete_responses.append(current_response)
                 yield "data: " + current_response + "\n\n"
-    
-    prompt_response = PromptResponse(
-        session_id="DEFAULT_SESSION_ID",
-        prompt=prompt,
-        response= "".join(complete_responses)
-    )
-    
