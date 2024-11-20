@@ -1,6 +1,7 @@
 from os import getenv
 from openai import OpenAI
 from dotenv import load_dotenv
+from main import messages
 
 load_dotenv()
 
@@ -9,8 +10,6 @@ client = OpenAI(
 )
 
 async def get_openai_generator(prompt: str):
-
-    messages = []
 
     # This is where we need to add the custom prompt
     messages.append({"role": "user", "content": prompt})
@@ -36,3 +35,10 @@ async def get_openai_generator(prompt: str):
                 current_response = response.delta.content
                 complete_responses.append(current_response)
                 yield "data: " + current_response + "\n\n"
+
+    final_message = ""
+    for data in complete_responses:
+        final_message += data
+
+
+    messages.append({"role": "assistant", "content": final_message})
