@@ -21,6 +21,9 @@ async def say_hello(name: str):
 def configure_routing():
     app.include_router(prompt_api.router)
 
+# Use this if you have Pycharm
+configure_routing()
+
 # Uses this if you don't have PyCharm
 # def main():
 #     configure_routing()
