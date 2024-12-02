@@ -12,10 +12,10 @@ The following are some common errors:
 7009 Suspicious File Download Detected: A file download that matches known malware signatures or suspicious file types was detected and blocked.
 7010 File Encryption Activity Detected: A process started encrypting files on the system, which could indicate ransomware attempting to lock files for ransom.
 7101 Virus Infection Detected: A file was found to contain a known virus signature, capable of replicating and spreading across the system.
-7104 Ransomware Encryption in Progress: A process was detected attempting to encrypt files on the system, commonly linked to ransomware attacks.
-7105 Spyware Process Identified: A process attempting to log user activity or capture sensitive data was found.
-7106 Adware Installed: Software designed to serve intrusive ads or redirect web browsing behavior was detected.
-7303 Suspicious File Hidden: A file was found in a location or format often used by malware to avoid detection.
-7401 Unauthorized Network Traffic Detected: A program was flagged for communicating with a suspicious or malicious server.
-7501 Keylogger Activity Found: A program was detected recording keyboard inputs, often used to steal sensitive information.
-7504 Suspicious Macro Script Found: A document or email attachment was found containing a macro script with malicious intent.'''}]
+7102 Ransomware Encryption in Progress: A process was detected attempting to encrypt files on the system, commonly linked to ransomware attacks.
+7103 Spyware Process Identified: A process attempting to log user activity or capture sensitive data was found.
+7104 Adware Installed: Software designed to serve intrusive ads or redirect web browsing behavior was detected.
+7105 Suspicious File Hidden: A file was found in a location or format often used by malware to avoid detection.
+7106 Unauthorized Network Traffic Detected: A program was flagged for communicating with a suspicious or malicious server.
+7107 Keylogger Activity Found: A program was detected recording keyboard inputs, often used to steal sensitive information.
+7108 Suspicious Macro Script Found: A document or email attachment was found containing a macro script with malicious intent.'''}]
